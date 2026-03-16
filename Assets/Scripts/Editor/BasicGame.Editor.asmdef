@@ -1,13 +1,16 @@
 {
-    "name": "BasicGame",
+    "name": "BasicGame.Editor",
     "references": [
-        "Unity.InputSystem"
+        "BasicGame",
+        "Unity.TextMeshPro.Editor"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

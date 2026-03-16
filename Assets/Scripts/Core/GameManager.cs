@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,4 +29,15 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState CurrentState => _currentState;
+
+    private void Update()
+    {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        if (Keyboard.current?.backquoteKey.wasPressedThisFrame == true)
+        {
+            GameLog.Info("GameManager", "Backtick pressed — triggering GameOver");
+            SetState(GameState.GameOver);
+        }
+#endif
+    }
 }
