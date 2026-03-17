@@ -1,8 +1,11 @@
 {
-  "outputStyle": "default",
   "permissions": {
     "allow": [
-      "WebSearch"
+      "WebSearch",
+      "Bash(find \"/Users/nate/projects/basic-game/Assets\" -name \"TMP*\" -o -name \"*LiberationSans*\" 2>/dev/null | head -10)",
+      "Bash(find \"/Users/nate/projects/basic-game/Library/PackageCache/com.unity.ugui@bb329a87fcdc\" -name \"LiberationSans*\" 2>/dev/null | head -5)",
+      "Bash(find \"/Users/nate/projects/basic-game/Library/PackageCache/com.unity.ugui@bb329a87fcdc\" -name \"*.asset\" 2>/dev/null | head -10)"
     ]
-  }
+  },
+  "outputStyle": "default"
 }

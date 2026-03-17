@@ -1,4 +1,5 @@
 ﻿<Solution>
   <Project Path="BasicGame.csproj" />
+  <Project Path="BasicGame.Editor.csproj" />
   <Project Path="Tests.EditMode.csproj" />
 </Solution>
