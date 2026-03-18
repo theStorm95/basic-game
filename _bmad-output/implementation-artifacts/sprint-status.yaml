@@ -45,7 +45,7 @@ development_status:
   1-1-launch-game-and-see-grid-map: done
   1-2-path-and-buildable-tiles-distinct: done
   1-3-game-over-screen: done
-  1-4-win-screen: backlog
+  1-4-win-screen: done
   1-5-restart-from-end-screens: backlog
   epic-1-retrospective: optional
 

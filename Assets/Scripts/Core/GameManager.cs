@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour
             GameLog.Info("GameManager", "Backtick pressed — triggering GameOver");
             SetState(GameState.GameOver);
         }
+        if (Keyboard.current?.f5Key.wasPressedThisFrame == true)
+        {
+            GameLog.Info("GameManager", "F5 pressed — triggering Win");
+            SetState(GameState.Win);
+        }
 #endif
     }
 }
