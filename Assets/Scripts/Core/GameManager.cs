@@ -30,6 +30,12 @@ public class GameManager : MonoBehaviour
 
     public GameState CurrentState => _currentState;
 
+    public void RestartGame()
+    {
+        GameLog.Info("GameManager", "RestartGame called — resetting to PreWave");
+        SetState(GameState.PreWave);
+    }
+
     private void Update()
     {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
