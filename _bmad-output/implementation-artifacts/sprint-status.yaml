@@ -34,6 +34,7 @@
 # - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
 
 generated: 2026-03-05
+last_updated: 2026-03-19  # updated by code-review
 project: basic-game
 project_key: NOKEY
 tracking_system: file-system
@@ -41,7 +42,7 @@ story_location: _bmad-output/implementation-artifacts
 
 development_status:
   # Epic 1: Game Foundation
-  epic-1: in-progress
+  epic-1: done
   1-1-launch-game-and-see-grid-map: done
   1-2-path-and-buildable-tiles-distinct: done
   1-3-game-over-screen: done
@@ -50,8 +51,8 @@ development_status:
   epic-1-retrospective: optional
 
   # Epic 2: Enemy Path System
-  epic-2: backlog
-  2-1-enemy-spawn-and-path-movement: backlog
+  epic-2: in-progress
+  2-1-enemy-spawn-and-path-movement: done
   2-2-lose-life-on-enemy-reach-end: backlog
   2-3-lives-count-display: backlog
   2-4-game-over-on-zero-lives: backlog
