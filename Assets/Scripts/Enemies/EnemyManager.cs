@@ -9,7 +9,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private EnemyDefinitionSO _enemyDefinition;
     [SerializeField] private float _spawnInterval = 2f; // Test loop — WaveManager replaces in Epic 6
 
-    public event System.Action OnEnemyReachedEnd; // Story 2-2 subscribes to deduct a life
+    public event System.Action OnEnemyReachedEnd; // Future subscribers (UI, DebugOverlay) may use this event
 
     private readonly List<Enemy> _activeEnemies = new List<Enemy>();
     public IReadOnlyList<Enemy> ActiveEnemies => _activeEnemies;
@@ -73,6 +73,7 @@ public class EnemyManager : MonoBehaviour
         _activeEnemies.Remove(enemy);
         EnemyPool.Instance.Release(enemy);
         OnEnemyReachedEnd?.Invoke();
+        GameManager.Instance.LoseLife();
         GameLog.Info("EnemyManager", "Enemy reached path end");
     }
 

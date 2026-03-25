@@ -6,8 +6,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     private GameState _currentState = GameState.PreWave;
+    private int _lives = GameConstants.MAX_LIVES;
 
     public event System.Action<GameState> OnStateChanged;
+    public event System.Action<int> OnLivesChanged;
 
     private void Awake()
     {
@@ -29,11 +31,22 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState CurrentState => _currentState;
+    public int Lives => _lives;
 
     public void RestartGame()
     {
+        _lives = GameConstants.MAX_LIVES;
+        OnLivesChanged?.Invoke(_lives);
         GameLog.Info("GameManager", "RestartGame called — resetting to PreWave");
         SetState(GameState.PreWave);
+    }
+
+    public void LoseLife()
+    {
+        if (_lives == 0) return;
+        _lives = Mathf.Max(0, _lives - 1);
+        OnLivesChanged?.Invoke(_lives);
+        GameLog.Info("GameManager", $"Life lost — {_lives} remaining");
     }
 
     private void Update()
