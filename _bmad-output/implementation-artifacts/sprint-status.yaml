@@ -51,11 +51,11 @@ development_status:
   epic-1-retrospective: optional
 
   # Epic 2: Enemy Path System
-  epic-2: in-progress
+  epic-2: done
   2-1-enemy-spawn-and-path-movement: done
   2-2-lose-life-on-enemy-reach-end: done
   2-3-lives-count-display: done
-  2-4-game-over-on-zero-lives: backlog
+  2-4-game-over-on-zero-lives: done
   epic-2-retrospective: optional
 
   # Epic 3: Tower Placement

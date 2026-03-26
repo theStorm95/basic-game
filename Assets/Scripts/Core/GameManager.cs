@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         if (_lives == 0) return;
         _lives = Mathf.Max(0, _lives - 1);
         OnLivesChanged?.Invoke(_lives);
+        if (_lives == 0) SetState(GameState.GameOver);
         GameLog.Info("GameManager", $"Life lost — {_lives} remaining");
     }
 
