@@ -6,4 +6,5 @@ public static class GameConstants
     public const int BOSS_WAVE_INTERVAL = 5;
     public const int GRID_WIDTH = 20;
     public const int GRID_HEIGHT = 12;
+    public const int STARTING_CURRENCY = 150;
 }
